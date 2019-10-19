@@ -7,24 +7,20 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidycensus)
+library(tidyverse)
+
 ```
 
-## R Markdown
+# About
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This data is from the US census and the American community survey which is administered by the US government. The census is administered every 10 years. Every household is expected to fill out the survey. Meanwhile, the American Community Survey is conducted every year and is only based on a survey of 3 million households.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+# About the data
 
-```{r cars}
-summary(cars)
-```
+Tidycensus is an R package that allows users to interface with the US Census Bureau’s decennial Census and five-year American Community APIs and return tidyverse-ready data frames, optionally with simple feature geometry included. Therefore, it stores two datasets that I will draw on for my final projects. Using the tidycensus package requeries installing an api key. Instructions can be found here: https://walkerke.github.io/tidycensus/articles/basic-usage.html. 
 
-## Including Plots
+Because I used the following code and specified install = TRUE for the api key, I no longer have to run this.
+  census_api_key("cec2ddb404f16f9748db315e2b03a90533b3f9a2", install = TRUE)
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
